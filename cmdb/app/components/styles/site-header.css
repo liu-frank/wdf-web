@@ -1,0 +1,17 @@
+.main-panel .site-header {
+  position: relative;
+  min-width: 1230px;
+  height: 80px;
+  line-height: 80px;
+  background: white;
+  font-size: 24px;
+  color: #354052;
+  padding-left: 31px;
+}
+
+.site-header .top-avatar {
+  position: absolute;
+  top: 15px;
+  right: 171px;
+}
+

@@ -1,0 +1,36 @@
+                  <li data-paths="{{paths}}" data-tableName="{{tableName}}" data-columnName="{{columnName}}" class="active">
+                    <button type="button">
+                      <p>{{displayName}}：<span></span></p>
+                    </button>
+                    <div class="data-search-close">
+                      <span></span>
+                    </div>
+                    {{#if dictionaryValues}}
+                      <div class="data-search-condition data-search-checkbox"{{#compare dictionaryValues.length 10}} style="overflow-y:scroll;"{{/compare}}>
+                        {{#each dictionaryValues}}
+                        <label><input type="checkbox" name={{../columnName}}></input>{{this}}</label>
+                        {{/each}}
+                      </div>
+                    {{else}}
+                      {{#equal type 'String'}}
+                      <div class="data-search-condition data-search-text">
+                        <input class="form-control" type="text" name={{columnName}} placeholder={{displayName}}></input>
+                      </div>
+                      {{else}}
+                      <div class="data-search-condition data-search-fromTo">
+                        <p>From：</p>
+                          {{#equal type 'Date'}}
+                          <input class="form-control form-control-date" type="text" placeholder="yyyy-MM-DD" data-date-format="yyyy-mm-dd" name="{{columnName}}"></input>
+                          {{else}}
+                          <input class="form-control" type="text" placeholder="From"></input>
+                          {{/equal}}
+                        <p>To：</p>
+                          {{#equal type 'Date'}}
+                          <input class="form-control form-control-date" type="text" placeholder="yyyy-MM-DD" data-date-format="yyyy-mm-dd" name="{{columnName}}"></input>
+                          {{else}}
+                          <input class="form-control" type="text" placeholder="To"></input>
+                          {{/equal}}
+                        </div>
+                      {{/equal}}
+                    {{/if}}
+                  </li>

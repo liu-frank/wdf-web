@@ -1,0 +1,10 @@
+p.help-block{
+	margin: 0;
+}
+
+p.help-block > ul{
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+

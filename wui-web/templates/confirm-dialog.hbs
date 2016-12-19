@@ -1,0 +1,98 @@
+<form class="box-header">
+    <div class="row">
+      {{#each fields}}
+          <div class="col-sm-4 form-group" >
+              <div class="col-sm-4 form-group" >
+                  <span>{{label}}</span>
+              </div>
+              <div class="col-sm-8 form-group">
+                {{#if text}}
+                  {{#if edit}}
+                      <input
+                              type="text"
+                              maxlength="11"
+                              class="form-control "
+                              style="overflow: hidden; whitewhite-space: nowrap;text-overflow: ellipsis;"
+                              title="{{{value}}}"
+                              name={{{name}}}
+                                      value='{{{value}}}'
+                              placeholder={{label}}>
+                      </input>
+                  {{else}}
+                      <input
+                              type="text"
+                              class="form-control "
+                              readOnly
+                              style="overflow: hidden; whitewhite-space: nowrap;text-overflow: ellipsis;"
+                              title="{{{value}}}"
+                              name={{{name}}}
+                                      value='{{{value}}}'
+                              placeholder={{label}}>
+                      </input>
+                  {{/if}}
+                {{/if}}
+                {{#if number}}
+                    <input
+                            type="number"
+                            maxlength="11"
+                            class="form-control "
+                            style="overflow: hidden; whitewhite-space: nowrap;text-overflow: ellipsis;"
+                            title="{{{value}}}"
+                            name={{{name}}}
+                                    value='{{{value}}}'
+                            placeholder={{label}}>
+                    </input>
+                {{/if}}
+                {{#if select}}
+                    <select
+                            name={{name}}
+                                    class="form-control">
+                      {{#each options}}
+                        {{#if select}}
+                            <option value={{value}} selected="selected">{{label}}</option>
+                        {{else}}
+                            <option value={{value}}>{{label}}</option>
+                        {{/if}}
+                      {{/each}}
+                    </select>
+                {{/if}}
+              </div>
+          </div>
+      {{/each}}
+    </div>
+  {{#if textInfo}}
+      <div class="row col-sm-12  form-group">
+          <div class="col-sm-2 form-group" >
+              <span>{{textInfo.label}}</span>
+          </div>
+          <div class="col-sm-10 form-group" id="reviewComment">
+            {{#if textInfoShow}}
+                <textarea class="form-control"  readonly="readonly" name="{{textInfo.name}}">{{textInfoShow}}</textarea>
+            {{else}}
+                <textarea class="form-control"  name="{{textInfo.name}}"></textarea>
+            {{/if}}
+          </div>
+
+      </div>
+  {{/if}}
+</form>
+<div style="text-align: right; margin-right: 20px;">
+  {{#if onCancel}}
+    {{#if cancelButton}}
+        <button id="cancelButton"  class="btn btn-default cancel-button">{{confirmButton}}</button>
+    {{else}}
+        <button id="cancelButton"  class="btn btn-default cancel-button">取消</button>
+    {{/if}}
+  {{else}}
+    {{#if cancelButton}}
+        <button id="cancelButton" data-dismiss="modal"  class="btn btn-default cancel-button">{{confirmButton}}</button>
+    {{else}}
+        <button id="cancelButton" data-dismiss="modal"  class="btn btn-default cancel-button">取消</button>
+    {{/if}}
+  {{/if}}
+  {{#if confirmButton}}
+      <button id="modal"  class="btn btn-primary save-button">{{confirmButton}}</button>
+  {{else}}
+      <button id="modal"  class="btn btn-primary save-button">确定</button>
+  {{/if}}
+</div>

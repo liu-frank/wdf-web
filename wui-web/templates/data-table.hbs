@@ -1,0 +1,64 @@
+<div class="box-body">
+    <div class='row'>
+  <table class="table table-bordered table-hover text-center table-responsive table-striped"  style="margin:10px;width:98%;minWidth:800px;">
+    <thead>
+      <tr>
+      {{#if groups}}
+      <th>选择</th>
+      {{/if}}
+      {{#each titles}}
+        <th style="width: {{width}}">{{title}}</th>
+      {{/each}}
+        {{#if operations}}
+        <th>操作</th>
+        {{/if}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each list}}
+      <tr>
+        {{#if ../groups}}
+          <td>
+                <input name="checkBox" type='checkbox' />
+          </td>
+        {{/if}}
+        {{#each this}}
+                <td>{{{this}}}</td>
+        {{/each}}
+
+        {{#if ../operations}}
+            <td>
+            {{#each ../../operations}}
+              {{#if dialog}}
+              <a href="javascript:void(0);" data-toggle="modal"
+                 data-target="#myModal" class={{className}}>{{name}}</a>
+              {{else}}
+              <a href="javascript:void(0);" class={{className}}>{{name}}</a>
+              {{/if}}
+            {{/each}}
+            </td>
+        {{/if}}
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+      </div>
+    {{#if groups}}
+        <div class='row'>
+          <label style='float: left; margin-left:20px; font-weight:normal'>
+              <input type='checkbox' id="checkAll" style="margin-right: 5px"/>
+              全选
+          </label>
+            <label style='float: left; margin-left:20px; font-weight:normal'>
+                <input type='checkbox' id="checkReverse" style="margin-right: 5px"/>
+                反选
+            </label>
+      {{#each groups}}
+        <button class='{{className}}' id='{{id}}' disabled style='float:left;margin-left:20px;margin-bottom:3px;'>
+          {{name}}
+        </button>
+      {{/each}}
+
+    </div>
+   {{/if}}
+</div>

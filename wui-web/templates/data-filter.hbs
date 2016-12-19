@@ -1,0 +1,54 @@
+<form class="box-header with-border">
+{{#each fields}}
+  <div class="col-sm-3">
+    <div class="form-group">
+      <label>{{label}}</label>
+      {{#if text}}
+        <input
+          type="text"
+          class="form-control"
+          name={{name}}
+          placeholder={{label}}>
+        </input>
+      {{/if}}
+      {{#if number}}
+          <input
+                  type="number"
+                  class="form-control"
+                  name={{name}}
+                          placeholder={{label}}>
+          </input>
+      {{/if}}
+      {{#if select}}
+        <select
+          name={{name}}
+          class="form-control">
+        {{#each options}}
+          <option value={{value}}>{{label}}</option>
+        {{/each}}
+        </select>
+      {{/if}}
+    </div>
+  </div>
+{{/each}}
+{{#if queryButton}}
+  <div class="col-sm-1">
+    <input
+      type="button"
+      style="margin-top: 24px;"
+      class="btn btn-info filter"
+      value={{queryButton}}>
+    </input>
+  </div>
+{{/if}}
+  {{#if addButton}}
+    <div class="col-sm-1">
+        <input
+                type="button"
+                style="margin-top: 24px;"
+                class="btn btn-primary add"
+                value={{addButton}}>
+        </input>
+    </div>
+  {{/if}}
+</form>

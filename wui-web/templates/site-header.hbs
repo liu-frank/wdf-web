@@ -1,0 +1,49 @@
+<header class="main-header">
+  <a href="home.html" class="logo">
+    <span class="logo-mini"><b>O</b>SP</span>
+    <span class="logo-lg"><b>网络科技客服系统</b></span>
+  </a>
+  <nav class="navbar navbar-static-top" role="navigation">
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+        {{#each headList}}
+        <a {{#if Active}}class="head-link"{{else}}class="head-active"{{/if}}  href='{{Herf}}' target='_blank'>
+            {{{title}}}
+        </a>
+        {{/each}}
+    </a>
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img src="/images/avatar.png" class="user-image" alt="User Image">
+            <span class="hidden-xs" id="user-name">{{ name }}</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="user-header">
+              <img src="/images/avatar.png" class="img-circle" alt="User Image">
+              <p>
+                {{ name }}
+                <small id="user-roles">{{ roles }}</small>
+              </p>
+            </li>
+            <li class="user-footer">
+              <div class="pull-left">
+                <a id='change-password' href="#" class="btn btn-default btn-flat">修改密码</a>
+              </div>
+              <div class="pull-right">
+                <a id='logout' href="#" class="btn btn-danger btn-flat">安全退出</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    {{#if cmdbQuick}}
+    <div class="navbar-cmdb-quick">
+      <span>快捷查询：</span>
+      <input type="text" name="quick-query" placeholder="快捷查询">
+    </div>
+    {{/if}}
+  </nav>
+</header>

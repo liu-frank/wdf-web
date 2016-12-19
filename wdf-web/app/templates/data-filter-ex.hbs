@@ -1,0 +1,98 @@
+<form class="box-header data-filter-ex">
+  <div class="clearfix">
+    {{#if leftButton}}
+    <input
+      id="data-filter-left-button"
+      type="button"
+      class="btn btn-success"
+      value="{{leftButton.name}}"
+    />
+    {{/if}}
+    {{#if rightButton}}
+    <input
+      id="data-filter-right-button"
+      type="button"
+      class="btn btn-primary pull-right"
+      value="{{rightButton.name}}"
+    />
+    {{/if}}
+    <ul class="data-filter-fields pull-right">
+      {{#each firstFields}}
+      <li>
+        {{#if text}}
+        <input
+          type="text"
+          name={{name}}
+          placeholder={{label}}>
+        </input>
+        {{/if}}
+        {{#if number}}
+        <input
+          type="number"
+          name={{name}}
+          placeholder={{label}}>
+        </input>
+        {{/if}}
+        {{#if select}}
+        <select
+          name={{name}}
+          class="form-control">
+          {{#each options}}
+          <option value={{value}}>{{label}}</option>
+          {{/each}}
+        </select>
+        {{/if}}
+        {{#if datePicker}}
+        <input
+          name={{name}}
+          class="form-control date-picker"
+          placeholder="{{label}}" />
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{#if secondFields}}
+  <div id="data-filter-expend" class="clearfix">
+    <ul class="data-filter-fields">
+      {{#each secondFields}}
+      <li>
+        {{#if text}}
+        <input
+          type="text"
+          name={{name}}
+          placeholder={{label}}>
+        </input>
+        {{/if}}
+        {{#if number}}
+        <input
+          type="number"
+          name={{name}}
+          placeholder={{label}}>
+        </input>
+        {{/if}}
+        {{#if select}}
+        <select
+          name={{name}}
+          class="form-control">
+          {{#each options}}
+          <option value={{value}}>{{label}}</option>
+          {{/each}}
+        </select>
+        {{/if}}
+        {{#if datePicker}}
+        <input
+          name={{name}}
+          class="form-control date-picker"
+          placeholder="{{label}}" />
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="text-center" style="margin-top:6px">
+    <a href="javascript:void(0);" style="font-size:10px" id="data-filter-close">收起 <i class="fa fa-caret-up" style="font-size:12px;margin-left:2px;"/></a>
+    <a href="javascript:void(0);" style="font-size:10px" id="data-filter-open">更多查询条件 <i class="fa fa-caret-down" style="font-size:12px;margin-left:2px;"/></a>
+  </div>
+  {{/if}}
+</form>

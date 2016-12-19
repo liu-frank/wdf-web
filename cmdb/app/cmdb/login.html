@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CMDB系统</title>
+  <meta name="description" content="CMDB系统">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles/cmdb/login.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="logo-header">欢迎使用CMDB系统</h1>
+    <div class="login-box">
+      <p>请输入帐号：</p>
+      <input
+        name="username"
+        id="username-input"
+        type="text"
+        autofocus
+        required
+        placeholder="请输入帐号" />
+      <p>请输入密码：</p>
+      <input
+        name="password"
+        id="password-input"
+        type="password"
+        required
+        placeholder="请输入密码" />
+      <p class='error-message'></p>
+      <button class='submit-button'type='submit'>
+        立即登录
+      </button>
+    </div>
+  </div>
+  <script src="../vendors/scripts/jquery.min.js"></script>
+  <script src="../scripts/cmdb/login.js"></script>
+</body>
+
+</html>

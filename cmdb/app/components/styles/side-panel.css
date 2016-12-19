@@ -1,0 +1,47 @@
+.side-panel {
+  float: left;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.side-panel .menu-panel {
+  width: 250px;
+  float: left;
+}
+
+.main-menu h4 {
+  padding: 27px 29px 15px;
+  font-size: 12px;
+  color: #5b6779;
+}
+
+.main-menu li {
+  font-size: 14px;
+  padding-left: 29px;
+  height: 36px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.main-menu li.active {
+  background: #313d4f;
+}
+
+.search-bar input {
+  width: 190px;
+  margin-top: 14px;
+  height: 36px;
+  line-height: 36px;
+  margin-left: 29px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #313d4f;
+  background: #222c3c;
+  color: #ffffff;
+}
+
+.side-panel ::-webkit-input-placeholder {
+  color: #475364;
+  font-size: 14px;
+}
+

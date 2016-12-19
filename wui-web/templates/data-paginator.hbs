@@ -1,0 +1,41 @@
+<div class="box-footer">
+  <div class="row" style="line-height: 35px">
+    <div class="col-sm-5">
+      当前显示 {{start}} 到 {{end}} 条，共 {{total}} 条
+    </div>
+    <div class="col-sm-7">
+      <ul class="pagination pagination-sm pull-right" style="margin: 0">
+      {{#compare totalPage 1}}
+        <li class="{{#equal currentPage 1}}disabled{{/equal}}">
+          <a class="paginator" data-role="first">
+            <i class="fa fa-fast-backward" />
+          </a>
+        </li>
+        <li class="{{#equal currentPage 1}}disabled{{/equal}}">
+          <a class="paginator" data-role="prev">
+            <i class="fa fa-backward" />
+          </a>
+        </li>
+      {{/compare}}
+      {{#each paginators}}
+        <li class="{{#equal ../currentPage this}}active{{/equal}}">
+          <a class="paginator" data-role={{this}}>{{this}}</a>
+        </li>
+      {{/each}}
+      {{#compare totalPage 1}}
+        <li class="{{#equal currentPage totalPage}}disabled{{/equal}}">
+          <a class="paginator" data-role="next">
+            <i class="fa fa-forward" />
+          </a>
+        </li>
+        <li
+          class="{{#equal currentPage totalPage}}disabled{{/equal}}">
+          <a class="paginator" data-role="last">
+            <i class="fa fa-fast-forward" />
+          </a>
+        </li>
+      {{/compare}}
+      </ul>
+    </div>
+  </div>
+</div>

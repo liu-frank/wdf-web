@@ -1,0 +1,14 @@
+
+.box .detail-header {
+  background: #f1f7fb;
+  margin: 12px 12px 0 12px;
+  height: 50px;
+  line-height: 30px;
+}
+
+.box .detail-header button {
+  float: right;
+  width: 160px;
+  height: 30px;
+  font-size: 12px;
+}

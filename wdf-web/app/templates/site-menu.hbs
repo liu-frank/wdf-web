@@ -1,0 +1,50 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="treeview {{#if isHome}} active {{/if}}">
+        <a href="/ams">
+          <i class="fa fa-circle"></i> <span>首页</span>
+        </a>
+      </li>
+    {{#each menus}}
+      <li class="treeview {{#if isActive}} active {{/if}}">
+        <a {{#if newPage}} target="_blank" {{/if}}
+          {{#if isLeaf}} href={{linkUrl}} {{else}} href="javascript:void(0)" {{/if}}>
+          <i class="fa fa-circle-o"></i> <span>{{resourceDisplayName}}</span>
+        </a>
+        <ul class="treeview-menu" style="display: block;">
+        {{#each subs}}
+          <li class="{{#if isActive}} active {{/if}}">
+            <a {{#if newPage}} target="_blank" {{/if}}
+               {{#if isLeaf}} href={{linkUrl}} {{else}} href="javascript:void(0)" {{/if}}>
+              <i class="fa fa-circle"></i> {{resourceDisplayName}}
+            </a>
+          </li>
+          {{#if ../../multiMenus}}
+          <ul class="treeview-menu" style="display: block;">
+          {{#each subs}}
+            <li class="{{#if isActive}} active {{/if}}">
+              <a {{#if newPage}} target="_blank" {{/if}}
+                {{#if isLeaf}} href={{linkUrl}} {{else}} href="javascript:void(0)" {{/if}}>
+                <i class="fa fa-circle"></i> {{resourceDisplayName}}
+              </a>
+            </li>
+            <ul class="treeview-menu" style="display: block;">
+            {{#each subs}}
+              <li class="{{#if isActive}} active {{/if}}">
+                <a {{#if newPage}}target="_blank"{{/if}} href={{linkUrl}}>
+                  <i class="fa fa-circle"></i> {{resourceDisplayName}}
+                </a>
+              </li>
+            {{/each}}
+            </ul>
+          {{/each}}
+          </ul>
+          {{/if}}
+        {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+    </ul>
+  </section>
+</aside>

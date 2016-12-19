@@ -1,0 +1,116 @@
+<div class="table-header">
+  <span>交易卡种</span>
+  <span>交易金额起(元)</span>
+  <span>交易金额终(元)</span>
+  <span>计费类型</span>
+  <span>收费方式</span>
+  <span>费用(元)/费率(%)</span>
+  <span>按比最低收费(%)</span>
+  <span>按比最高收费(%)</span>
+</div>
+<div class="table-body">
+  {{#each list}}
+  <div class="table-row">
+    <span>
+      <select class="form-control card-type">
+        <option value="0" {{#equal cardType 0}}selected{{/equal}}>全部</option>
+        <option value="1" {{#equal cardType 1}}selected{{/equal}}>本行同城</option>
+        <option value="1" {{#equal cardType 2}}selected{{/equal}}>本行异地</option>
+        <option value="2" {{#equal cardType 3}}selected{{/equal}}>他行</option>
+      </select>
+    </span>
+    <span>
+      <select class="form-control start-amount">
+        <option value="0" {{#equal amountStartSection 0}}selected{{/equal}}>0</option>
+        <option value="1" {{#equal amountStartSection 1}}selected{{/equal}}>1000</option>
+        <option value="2" {{#equal amountStartSection 2}}selected{{/equal}}>5000</option>
+        <option value="3" {{#equal amountStartSection 3}}selected{{/equal}}>10000</option>
+        <option value="4" {{#equal amountStartSection 4}}selected{{/equal}}>30000</option>
+        <option value="5" {{#equal amountStartSection 5}}selected{{/equal}}>50000</option>
+        <option value="6" {{#equal amountStartSection 6}}selected{{/equal}}>100000</option>
+        <option value="7" {{#equal amountStartSection 7}}selected{{/equal}}>500000</option>
+        <option value="8" {{#equal amountStartSection 8}}selected{{/equal}}>1000000</option>
+      </select>
+    </span>
+    <span>
+      <select class="form-control end-amount">
+        <option value="1" {{#equal amountEndSection 1}}selected{{/equal}}>1000</option>
+        <option value="2" {{#equal amountEndSection 2}}selected{{/equal}}>5000</option>
+        <option value="3" {{#equal amountEndSection 3}}selected{{/equal}}>10000</option>
+        <option value="4" {{#equal amountEndSection 4}}selected{{/equal}}>30000</option>
+        <option value="5" {{#equal amountEndSection 5}}selected{{/equal}}>50000</option>
+        <option value="6" {{#equal amountEndSection 6}}selected{{/equal}}>100000</option>
+        <option value="7" {{#equal amountEndSection 7}}selected{{/equal}}>500000</option>
+        <option value="8" {{#equal amountEndSection 8}}selected{{/equal}}>1000000</option>
+        <option value="9" {{#equal amountEndSection 9}}selected{{/equal}}>&infin;</option>
+      </select>
+    </span>
+    <span>
+      <select class="form-control charge-type">
+        <option value="">请选择</option>
+        <option value="0" {{#equal feeType 0}}selected{{/equal}}>手续费</option>
+        <option value="1" {{#equal feeType 1}}selected{{/equal}}>汇划费</option>
+      </select>
+    </span>
+    <span>
+      <select class="form-control charge-way">
+        <option value="">请选择</option>
+        <option value="0" {{#equal caculateType 0}}selected{{/equal}}>按笔收费</option>
+        <option value="1" {{#equal caculateType 1}}selected{{/equal}}>按比例收费</option>
+      </select>
+    </span>
+    <span>
+      {{#equal caculateType ''}}
+        <input type="number"
+               disabled
+               min="0"
+               max="999.99"
+               step="0.01"
+               class="form-control feeAmount"
+               value="{{feeAmount}}" />
+      {{/equal}}
+      {{#equal caculateType 0}}
+        <input type="number"
+               min="0"
+               max="999.99"
+               step="0.01"
+               required
+               class="form-control feeAmount"
+               value="{{feeAmount}}" />
+      {{/equal}}
+      {{#equal caculateType 1}}
+        <input type="number"
+               min="0"
+               max="100"
+               step="0.00001"
+               required
+               class="form-control feeAmount"
+               value="{{feeAmount}}" />
+      {{/equal}}
+    </span>
+    <span>
+      <input type="number"
+             {{#equal caculateType ''}}disabled{{/equal}}
+             {{#equal caculateType 0}}disabled{{/equal}}
+             min="0"
+             max="999.99"
+             step="0.01"
+             class="form-control start-fee"
+             required
+             value="{{minBypercent}}" />
+    </span>
+    <span>
+      <input type="number"
+             {{#equal caculateType ''}}disabled{{/equal}}
+             {{#equal caculateType 0}}disabled{{/equal}}
+             min="0"
+             max="999.99"
+             step="0.01"
+             class="form-control end-fee"
+             required
+             value="{{maxBypercent}}" />
+    </span>
+    <div class="delete-button"></div>
+  </div>
+  {{/each}}
+</div>

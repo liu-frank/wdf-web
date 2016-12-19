@@ -1,0 +1,10 @@
+<ul class="wui-breadcrumb">
+  {{#each paths}}
+    {{#if url}}
+      <li><a href="{{url}}">{{name}}</a></li>
+    {{else}}
+      <li><i class="fa fa-angle-right" /></li>
+      <li>{{name}}</li>
+    {{/if}}
+  {{/each}}
+</ul>

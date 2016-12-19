@@ -1,0 +1,155 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: MicrosoftYaHei;
+	background: #3c8dbc;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+	color: #999999;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: #999999;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #999999;
+}
+
+:-ms-input-placeholder {
+	color: #999999;
+}
+
+.logo-header {
+	margin: 100px auto 50px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.login-box {
+	padding-top: 15px;
+	margin: 40px auto;
+	width: 400px;
+	height: 300px;
+	background: #ffffff;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.19);
+	border-radius: 4px;
+}
+.login-box p {
+	font-size: 14px;
+	letter-spacing: -0.34px;
+	margin: 10px 0;
+	padding-left: 45px;
+}
+
+.login-header {
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+}
+
+.login-header p {
+	font-size: 18px;
+	color: #333333;
+	letter-spacing: -0.44px;
+	padding-left: 44px;
+}
+
+.login-header img {
+	position: absolute;
+	bottom: 0;
+}
+
+.login-box input {
+	margin: 15px auto;
+	display: block;
+	background: #f5f5f5;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	width: 310px;
+	height: 42px;
+	font-size: 14px;
+	letter-spacing: -0.34px;
+	padding-left: 18px;
+}
+
+#id-input {
+	/*margin: 16px auto 0;*/
+}
+
+#password-input {
+	/*margin: 20px auto 0;*/
+}
+
+.error-message {
+	display: none;
+	font-size: 14px;
+	color: #f92828;
+	letter-spacing: -0.34px;
+	margin-top: 10px;
+	padding-left: 45px;
+}
+
+.submit-button {
+	display: block;
+	margin: 20px auto 0;
+	background: #3c8dbc;
+	border-radius: 4px;
+	width: 330px;
+	height: 44px;
+	font-size: 16px;
+	color: #ffffff;
+	letter-spacing: -0.39px;
+	border: none;
+	cursor: pointer;
+}

@@ -1,0 +1,42 @@
+.data-filter-ex {
+   background: #f1f7fb;
+   margin: 12px;
+}
+
+#data-filter-left-button,
+#data-filter-right-button {
+  width: 80px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.data-filter-fields {
+  margin: 0;
+  padding: 0;
+}
+
+.data-filter-fields li {
+  list-style: none;
+  float: left;
+}
+
+.data-filter-fields li input,
+.data-filter-fields li select {
+  width: 160px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  margin-right: 10px;
+  font-size: 12px;
+  padding:0 11px;
+}
+
+#data-filter-expend {
+  margin-top: 10px;
+}
+
+#data-filter-expend .data-filter-fields {
+ width: 680px;
+ margin-right: 80px;
+ float: right;
+}

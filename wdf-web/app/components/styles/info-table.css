@@ -1,0 +1,35 @@
+.info-table {
+  margin: 2px;
+}
+
+.info-table dl {
+  margin: 0 0 10px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.info-table dt {
+  float: left;
+  width: 16%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #666666;
+  background:#f8fbfd;
+  border: 1px solid #ebebeb;
+  font-weight: normal;
+}
+
+.info-table dd {
+  float: left;
+  width: 34%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #222222;
+  border: 1px solid #ebebeb;
+}
+
+

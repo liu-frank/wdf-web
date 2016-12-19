@@ -1,0 +1,324 @@
+@charset "UTF-8";
+.content-header {
+  padding: 5px 15px 0 15px; }
+
+.content {
+  padding: 5px 15px; }
+
+.box {
+  margin-bottom: 10px; }
+
+.modal-header, .modal-footer {
+  padding: 10px; }
+
+.modal-header .close {
+  margin-top: -8px; }
+
+.modal-body > h4 {
+  margin: 0;
+  padding-top: 10px;
+  border-top: solid 1px #333; }
+
+.modal-body > h4:first-child {
+  padding-top: 0;
+  border-top: none; }
+
+.modal-body .form-group {
+  margin-bottom: 10px; }
+
+.navbar-custom-menu .user-footer .pull-left {
+  display: none; }
+
+.main-header .head-link {
+  display: none; }
+
+/*login*/
+.cmdb-login {
+  background: #eee; }
+
+.cmdb-login > h1 {
+  margin: 50px;
+  text-align: center;
+  color: #007ee0; }
+
+.login {
+  margin: auto;
+  padding-top: 20px;
+  width: 400px;
+  height: 300px;
+  background: #fff;
+  border: solid 1px #999;
+  border-radius: 4px; }
+
+.login > .form-group {
+  margin: 30px 0;
+  text-align: center; }
+
+.login > .form-group > input {
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  line-height: 20px;
+  border: solid 1px #eee; }
+
+.login > .form-group > button {
+  margin: 0;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  line-height: 18px;
+  border: solid 1px #eee;
+  background: #007ee0;
+  color: #fff; }
+
+.login > .error-message {
+  display: none;
+  text-align: center;
+  color: #f00; }
+
+/*首页*/
+.row-home {
+  padding: 0 20px; }
+
+.row-home > div {
+  padding: 0 10px; }
+
+.home-cont {
+  padding: 0 10px;
+  margin: 20px 0;
+  border: solid 1px #999; }
+
+.home-cont-board {
+  height: 600px; }
+
+.home-cont-notice {
+  height: 380px; }
+
+.home-cont-notice ul {
+  list-style: none;
+  padding-left: 10px; }
+
+.home-cont-route {
+  height: 200px; }
+
+.home-cont-route a {
+  margin-right: 30px; }
+
+/*标签*/
+.modal-body .data-search {
+  padding: 0; }
+
+.modal-body .box-body {
+  padding: 0; }
+
+.modal-body .data-table .row:last-child {
+  display: none; }
+
+.modal-body > .row > div > h4 {
+  margin-top: 0; }
+
+.modal-body > .row > div > p {
+  margin-bottom: 0;
+  padding-left: 1em;
+  cursor: pointer; }
+
+.modal-body > .row > div > p > span {
+  position: relative; }
+
+.modal-body > .row > div > p > span:after {
+  border: 4px solid transparent;
+  border-left-color: #111;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: -10px;
+  top: 4px;
+  width: 0; }
+
+.modal-body > .row > div > p.active > span:after {
+  border-left-color: transparent;
+  border-top-color: #111;
+  top: 7px;
+  left: -14px; }
+
+.modal-body .data-label > h4 > span {
+  float: right;
+  margin-top: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #999; }
+
+.modal-body .data-label > h4 > span:hover {
+  color: #333; }
+
+.modal-body .data-label ul {
+  display: none;
+  list-style: none;
+  padding: 0; }
+
+.modal-body .data-label p.active + ul {
+  display: block; }
+
+.modal-body .data-label li {
+  padding-left: 2em; }
+
+/*菜单*/
+.treeview-menu li.active + .treeview-menu {
+  display: block; }
+
+/*bootstrap-datatimepeaker 左右箭头*/
+.datetimepicker-days thead tr:first-child th {
+  padding: 0;
+  width: 20px;
+  height: 20px; }
+
+.datetimepicker-days thead i {
+  position: relative;
+  padding: 5px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  width: 26px;
+  height: 26px; }
+
+.datetimepicker-days thead i:hover {
+  background: #eee;
+  border-radius: 4px; }
+
+.icon-arrow-left:before {
+  content: "\e091"; }
+
+.icon-arrow-right:before {
+  content: "\e092"; }
+
+/*快捷查询*/
+.navbar-cmdb-quick {
+  float: right;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 20px; }
+
+.navbar-cmdb-quick span,
+.navbar-cmdb-quick input {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px; }
+
+.navbar-cmdb-quick span {
+  color: #fff; }
+
+.navbar-cmdb-quick input {
+  padding: 5px;
+  border: none;
+  border-radius: 4px; }
+
+/*配置项查询*/
+.quick-query .content-wrapper {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 50px;
+  z-index: 1; }
+
+.quick-query .content {
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  bottom: 0; }
+
+.quick-query .box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  left: 0;
+  right: 0; }
+
+.quick-query-right {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-left: 200px;
+  border-left: solid 2px #eee; }
+
+.quick-query-right .data-search-more {
+  display: none; }
+
+.quick-query-left {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  float: left;
+  width: 200px;
+  padding: 0 10px;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: scroll; }
+
+.quick-query-left > p {
+  margin-bottom: 0;
+  padding-left: 1em;
+  cursor: pointer; }
+
+.quick-query-left > p > span {
+  position: relative; }
+
+.quick-query-left > p > span:after {
+  border: 4px solid transparent;
+  border-left-color: #111;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: -10px;
+  top: 4px;
+  width: 0; }
+
+.quick-query-left > p.active > span:after {
+  border-left-color: transparent;
+  border-top-color: #111;
+  top: 7px;
+  left: -14px; }
+
+.quick-query-left > h4 > span {
+  float: right;
+  margin-top: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #999; }
+
+.quick-query-left > h4 > span:hover {
+  color: #333; }
+
+.quick-query-left > ul {
+  display: none;
+  list-style: none;
+  padding: 0; }
+
+.quick-query-left > p.active + ul {
+  display: block; }
+
+.quick-query-left > ul > li {
+  margin: 3px 0;
+  padding-left: 10px; }
+
+.quick-query-left > ul > li:hover {
+  background: #efefef; }
+
+.quick-query-left > ul > li > label {
+  margin: 0;
+  width: 100%;
+  font-weight: normal; }
+
+.quick-query-left > ul > li > label > input {
+  margin-right: 5px; }

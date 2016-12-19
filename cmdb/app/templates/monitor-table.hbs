@@ -1,0 +1,28 @@
+<table class="monitor-table">
+  <thead>
+    <tr>
+      <th>业务种类</th>
+      <th>交易名称</th>
+      <th>交易流水号 / 交易时间</th>
+      <th>交易状态</th>
+      <th>错误信息</th>
+      <th>交易金额</th>
+      <th>本方帐号 / 开户行</th>
+      <th>受理帐号 / 开户行</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each list}}
+    <tr>
+      <td>{{busTypeName}}</td>
+      <td>{{transName}}</td>
+      <td>{{channelPackageNo}} / {{transactionDate}}</td>
+      <td>{{transStatusName}}</td>
+      <td>{{statusCode}} {{statusDesc}}</td>
+      <td>{{payAmt}}</td>
+      <td>{{accountName}} / {{accountBranchName}}</td>
+      <td>{{oppAccNo}} / {{oppBranchName}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
